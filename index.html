@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,12 @@ header {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+    opacity: 0; /* Initially hide the image */
+    transition: opacity 1s ease; /* Add transition for fade-in effect */
+}
+
+.hero img.active {
+    opacity: 1; /* Make the active image visible */
 }
 
 .hero p {
@@ -140,16 +146,17 @@ header {
         <br/>   <br/>
     </header>
 
-    <section class="hero">
-        <h2>Unlock the secrets to attract wealth and abundance</h2>
-        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">  
-            <img src="imgs/img1.jpg"> 
-        </a>
-        <p>Discover powerful strategies to magnetize money into your life.</p>
-        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">
-            <button>Start Attracting Wealth Now</button>
-        </a>
-    </section>
+<section class="hero">
+    <h2>Unlock the secrets to attract wealth and abundance</h2>
+    <img class="active" src="imgs/img1.jpg" alt="Slide 1">
+    <!-- Add more images as needed -->
+
+    <p>Discover powerful strategies to magnetize money into your life.</p>
+    <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">
+        <button>Start Attracting Wealth Now</button>
+    </a>
+</section>
+
 
     <section class="features">
         <div class="container">
@@ -181,5 +188,36 @@ header {
     <footer class="footer">
         <p>&copy; 2024 Magnetizing Money. All rights reserved.</p>
     </footer>
+
+
+    <script>
+            const images = document.querySelector('.active');
+
+            function change(change) {
+                  images.style.opacity = 0; // Fade out the current image
+                  setTimeout(() => {
+                      images.src = "imgs/img"+change+".jpg";
+                      images.alt = "Slide "+change;
+                      images.style.opacity = 1; // Fade in the new image
+                  }, 550); // Change the duration (in milliseconds) for the fade effect if needed
+            }
+
+            function showNextImage() {
+                 if(images.alt === 'Slide 1') {
+                     change('2');  
+                 } else 
+                 if(images.alt === 'Slide 2') {
+                   change('3');
+                 } else
+                 if(images.alt === 'Slide 3') {
+                    change('4');
+                 }else
+                   if(images.alt === 'Slide 4') {
+                      change('1');
+                 }
+            }
+
+            setInterval(showNextImage, 5000); // Change image every 3 seconds
+           </script>
 </body>
 </html>
