@@ -6,159 +6,156 @@
     <title>Magnetizing Money</title>
     <link rel="stylesheet" href="styles.css">
 
-   <!-- Add Google Fonts link -->
+    <!-- Add Google Fonts link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap">
 
     <!-- Add FontAwesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<style>
-body {
-    font-family: 'Open Sans', Arial, sans-serif; /* Specify Open Sans first */
-    margin: 0;
-    padding: 0;
-}
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif; /* Specify Open Sans first */
+            margin: 0;
+            padding: 0;
+        }
 
-header {
-    background-color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-.hero { 
-    background-color: #6892c1;
-    color: #fff;
-    padding: 50px;
-    text-align: center;
-    border-bottom: 4px solid #547aa1;
-}
+        .hero { 
+            background-color: #6892c1;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+            border-bottom: 4px solid #547aa1;
+        }
 
-.hero img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    opacity: 0; /* Initially hide the image */
-    transition: opacity 2s ease; /* Add transition for fade-in effect */
-}
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            opacity: 0; /* Initially hide the image */
+            transition: opacity 2s ease; /* Add transition for fade-in effect */
+        }
 
-.hero img.active {
-    opacity: 1; /* Make the active image visible */
-}
+        .hero img.active {
+            opacity: 1; /* Make the active image visible */
+        }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
 
-.hero button {
-    background-image: linear-gradient(to right, #ff6b6b, #ffb997); /* Gradient background */
-    color: #fff;
-    border: none;
-    padding: 25px 60px; /* Increased padding */
-    font-size: 24px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
+        .hero button {
+            background-image: linear-gradient(to right, #ff6b6b, #ffb997); /* Gradient background */
+            color: #fff;
+            border: none;
+            padding: 25px 60px; /* Increased padding */
+            font-size: 24px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Remove underline */
+            display: inline-block;
+        }
 
-.hero button:hover {
-    background-image: linear-gradient(to right, #ff7e7e, #ffc8c8); /* Change gradient on hover */
-}
+        .hero button:hover {
+            background-image: linear-gradient(to right, #ff7e7e, #ffc8c8); /* Change gradient on hover */
+        }
 
-.features {
-    padding: 50px 0;
-    text-align: center;
-}
+        .features {
+            padding: 50px 0;
+            text-align: center;
+        }
 
-.feature {
-    margin-bottom: 50px;
-}
+        .feature {
+            margin-bottom: 50px;
+        }
 
-.feature i {
-    font-size: 48px;
-    color: #6892c1;
-    margin-bottom: 20px;
-}
+        .feature i {
+            font-size: 48px;
+            color: #6892c1;
+            margin-bottom: 20px;
+        }
 
-.feature h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
-.feature p {
-    font-size: 18px;
-}
+        .feature p {
+            font-size: 18px;
+        }
 
-.footer {
-    background-color: #343a40;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
 
-.logo {
-    width: 185px;
-    margin-bottom: 20px;
-}
+        .logo {
+            width: 185px;
+            margin-bottom: 20px;
+        }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-/* Media query for smaller hero image on desktop */
-@media only screen and (min-width: 768px) {
-    .hero img {
-        max-width: 40%;
-    }
-}
+        /* Media query for smaller hero image on desktop */
+        @media only screen and (min-width: 768px) {
+            .hero img {
+                max-width: 40%;
+            }
+        }
 
-.cta-button {
-    background-image: linear-gradient(to right, #ff6b6b, #ffb997); /* Gradient background */
-    color: #fff;
-    border: none;
-    padding: 15px 40px;
-    font-size: 24px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    text-decoration: none; /* Remove underline */
-}
+        .cta-button {
+            background-image: linear-gradient(to right, #ff6b6b, #ffb997); /* Gradient background */
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Remove underline */
+            display: inline-block;
+        }
 
-.cta-button:hover {
-    background-image: linear-gradient(to right, #ff7e7e, #ffc8c8); /* Change gradient on hover */
-}
-
-</style>
-
-
+        .cta-button:hover {
+            background-image: linear-gradient(to right, #ff7e7e, #ffc8c8); /* Change gradient on hover */
+        }
+    </style>
 </head>
 <body>
     <header>
        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank"> 
         <img src="imgs/logo.png" alt="" class='logo'>
        </a><br/>
-        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank" class="cta-button">Start Attracting Wealth Now</a>
+        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank" class="cta-button">Attract Wealth Now!</a>
         <br/>   <br/>
     </header>
 
-<section class="hero">
-    <h2>Discover How To Attract Money and Wealth!</h2>
+    <section class="hero">
+        <h2>Discover How To Attract Money and Wealth!</h2>
         <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">  
             <img class="active" src="imgs/img1.jpg" alt="Slide 1">
         </a>
-    <!-- Add more images as needed -->
+        <!-- Add more images as needed -->
 
-    <p>Notice As Money Magnetizes Into Your Money Life.</p>
-    <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">
-        <button>Start Attracting Wealth Now</button>
-    </a>
-</section>
-
+        <p>Notice As Money Magnetizes Into Your Money Life.</p>
+        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank" class="cta-button">Attract Wealth Now!</a>
+    </section>
 
     <section class="features">
         <div class="container">
@@ -191,35 +188,35 @@ header {
         <p>&copy; 2024 Magnetizing Money. All rights reserved.</p>
     </footer>
 
-
     <script> 
-            const images = document.querySelector('.active');
+        const images = document.querySelector('.active');
 
-            function change(change) {
-                  images.style.opacity = 0; // Fade out the current image
-                  setTimeout(() => {
-                      images.src = "imgs/img"+change+".jpg";
-                      images.alt = "Slide "+change;
-                      images.style.opacity = 1; // Fade in the new image
-                  }, 550); // Change the duration (in milliseconds) for the fade effect if needed
-            }
+        function change(change) {
+              images.style.opacity = 0; // Fade out the current image
+              setTimeout(() => {
+                  images.src = "imgs/img"+change+".jpg";
+                  images.alt = "Slide "+change;
+                  images.style.opacity = 1; // Fade in the new image
+              }, 550); // Change the duration (in milliseconds) for the fade effect if needed
+        }
 
-            function showNextImage() {
-                 if(images.alt === 'Slide 1') {
-                     change('2');  
-                 } else 
-                 if(images.alt === 'Slide 2') {
-                   change('3');
-                 } else
-                 if(images.alt === 'Slide 3') {
-                    change('4');
-                 }else
-                   if(images.alt === 'Slide 4') {
-                      change('1');
-                 }
-            }
+        function showNextImage() {
+             if(images.alt === 'Slide 1') {
+                 change('2');  
+             } else if(images.alt === 'Slide 2') {
+                 change('3');
+             } else if(images.alt === 'Slide 3') {
+                change('4');
+             } else if(images.alt === 'Slide 4') {
+                 change('5');
+             } else if(images.alt === 'Slide 5') {
+                 change('6');
+             } else if(images.alt === 'Slide 6') {
+                 change('1');
+             }
+        }
 
-            setInterval(showNextImage, 5000); // Change image every 3 seconds
-           </script>
+        setInterval(showNextImage, 5000); // Change image every 3 seconds
+    </script>
 </body>
 </html>
