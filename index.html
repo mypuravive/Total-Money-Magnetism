@@ -39,7 +39,7 @@ header {
     height: auto;
     margin-bottom: 20px;
     opacity: 0; /* Initially hide the image */
-    transition: opacity 0.5s ease; /* Add transition for fade-in effect */
+    transition: opacity 2s ease; /* Add transition for fade-in effect */
 }
 
 .hero img.active {
@@ -201,7 +201,7 @@ header {
                       images.src = "imgs/img"+change+".jpg";
                       images.alt = "Slide "+change;
                       images.style.opacity = 1; // Fade in the new image
-                  }, 500); // Change the duration (in milliseconds) for the fade effect if needed
+                  }, 550); // Change the duration (in milliseconds) for the fade effect if needed
             }
 
             function showNextImage() {
@@ -219,7 +219,7 @@ header {
                  }
             }
 
-            setInterval(showNextImage, 5000); // Change image every 5 seconds
+            setInterval(showNextImage, 5000); // Change image every 3 seconds
            </script>
 </body>
 </html>
