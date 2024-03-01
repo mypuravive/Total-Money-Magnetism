@@ -1,222 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnetizing Money</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <!-- Add Google Fonts link -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap">
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+}
 
-    <!-- Add FontAwesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    <style>
-        body {
-            font-family: 'Open Sans', Arial, sans-serif; /* Specify Open Sans first */
-            margin: 0;
-            padding: 0;
-        }
+header img.logo {
+  width: 110px;
+}
 
-        header {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+a {
+  text-decoration: none;
+  color: black;
+}
 
-        .hero { 
-            background-color: #6892c1;
-            color: #fff;
-            padding: 50px;
-            text-align: center;
-            border-bottom: 4px solid #547aa1;
-        }
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
 
-        .hero img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            opacity: 0; /* Initially hide the image */
-            transition: opacity 2s ease; /* Add transition for fade-in effect */
-        }
+.hero {
+  background-image: url("imgs/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
 
-        .hero img.active {
-            opacity: 1; /* Make the active image visible */
-        }
+.hero .content-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
 
-        .hero button {
-            background-image: linear-gradient(to right, #ff6b6b, #ffb997); /* Gradient background */
-            color: #fff;
-            border: none;
-            padding: 25px 60px; /* Increased padding */
-            font-size: 24px;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-            text-decoration: none; /* Remove underline */
-            display: inline-block;
-        }
+.hero .watch-video-button {
+  padding: 15px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-        .hero button:hover {
-            background-image: linear-gradient(to right, #ff7e7e, #ffc8c8); /* Change gradient on hover */
-        }
+.hero .watch-video-button:hover {
+  background-color: #333;
+}
 
-        .features {
-            padding: 50px 0;
-            text-align: center;
-        }
+.section {
+  padding: 50px 0;
+  text-align: center;
+  overflow: hidden; /* Clear floats */
+}
 
-        .feature {
-            margin-bottom: 50px;
-        }
+.section img {
+  max-width: 100%;
+  height: auto;
+}
 
-        .feature i {
-            font-size: 48px;
-            color: #6892c1;
-            margin-bottom: 20px;
-        }
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
 
-        .feature h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+.section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
 
-        .feature p {
-            font-size: 18px;
-        }
+.blog-post {
+  width: 100%; /* Adjusted width for mobile view */
+  padding: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-        .footer {
-            background-color: #343a40;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
+.blog-post img {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 20px; /* Center image */
+  display: block; /* Ensure proper display */
+}
 
-        .logo {
-            width: 185px;
-            margin-bottom: 20px;
-        }
+.blog-post h2 {
+    margin-top: 0;
+    overflow: hidden;
+    height: 45px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+@media (min-width: 768px) {
+  .blog-post {
+    float: right; /* Restore float for desktop view */
+    width: 50%;
+  }
+}
 
-        /* Media query for smaller hero image on desktop */
-        @media only screen and (min-width: 768px) {
-            .hero img {
-                max-width: 40%;
-            }
-        }
-
-        .cta-button {
-            background-image: linear-gradient(to right, #ff6b6b, #ffb997); /* Gradient background */
-            color: #fff;
-            border: none;
-            padding: 15px 40px;
-            font-size: 24px;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-            text-decoration: none; /* Remove underline */
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            background-image: linear-gradient(to right, #ff7e7e, #ffc8c8); /* Change gradient on hover */
-        }
-    </style>
+  </style>
 </head>
+
 <body>
-    <header>
-       <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank"> 
-        <img src="imgs/logo.png" alt="" class='logo'>
-       </a><br/>
-        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank" class="cta-button">Magnetize Money Now!</a>
-        <br/>   <br/>
-    </header>
+  <header>
+    <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">
+      <img src="imgs/logo.png" alt="Logo" class="logo">
+    </a>
+    <br>
+    <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank" class="cta-button">Magnetize Money Now!</a>
+    <br><br>
+    <nav><!-- Add your navigation here if needed --></nav>
+  </header>
 
-    <section class="hero">
-        <h2>Learn To Magnetize Money and Wealth!</h2>
-        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">  
-            <img class="active" src="imgs/img1.jpg" alt="Slide 1">
-        </a>
-        <!-- Add more images as needed -->
+  <div class="hero">
+    <div class="content-wrap">
+      <h1>Money Magnetism</h1>
+      <button class="watch-video-button">Watch Video!</button>
+    </div>
+  </div>
 
-        <p>Notice As Money Magnetizes Into Your Money Life.</p>
-        <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank" class="cta-button">Magnetize Money Now!</a>
-    </section>
+  <div class="section">
+    <div class="blog-post">
+      <a href='blog1.html'><img src="imgs/blog_imgs/1.jpg" alt="Blog Post 1 Image"></a>
+      <h2><a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net">Harnessing Hypnotic Language</a></h2>
+      <p>A Short but powerful money hypnosis</p>
+      <a href="blog1.html" class="cta-button">Read More</a>
+    </div>
+    <div class="blog-post">
+    <a href='blog2.html'><img src="imgs/blog_imgs/2.jpg" alt="Blog Post 2 Image"></a>
+      <h2><a href="blog2.html'">The Mindfulness Secret to Abundance</a></h2>
+      <p>The practice of mindfulness reveals a profound connection between feelings of comfort and wealth....</p>
+      <a href="blog2.html" class="cta-button">Read More</a>
+    </div>
+        <div class="blog-post">
+      <a href='blog3.html'><img src="imgs/blog_imgs/3.jpg" alt="Blog Post 1 Image"></a>
+      <h2><a href="blog3.html">Let's Switch Your Mindset</a></h2>
+      <p>The passage is intended to prompt introspection and encourage a shift in perspective.</p>
+      <a href="blog3.html" class="cta-button">Read More</a>
+    </div>
+    <div class="blog-post">
+    <a href='blog4.html'><img src="imgs/blog_imgs/4.jpg" alt="Blog Post 2 Image"></a>
+      <h2><a href="blog4.html">Making you Comfortable With Money</a></h2>
+      <p>By prompting you to focus on your current experience and envision yourself as a wealthy person with all your desires fulfilled.</p>
+      <a href="blog4.html" class="cta-button">Read More</a>
+    </div>
+    <div style="clear:both;"></div> <!-- Clear floats -->
+  </div>
 
-    <section class="features">
-        <div class="container">
-            <h2>Key Features</h2>
-            <div class="feature">
-                <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">
-                    <i class="fas fa-certificate"></i>
-                </a>
-                <h3>Manifest Prosperity</h3>
-                <p>Learn proven techniques to manifest wealth effortlessly.</p>
-            </div>
-            <div class="feature">
-                 <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank"> 
-                    <i class="fas fa-chart-line"></i>
-                </a>
-                <h3>Financial Freedom</h3>
-                <p>Gain the knowledge and tools to achieve financial independence.</p>
-            </div>
-            <div class="feature">
-                <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">
-                    <i class="fas fa-gem"></i>
-                </a>
-                <h3>Abundance Mindset</h3>
-                <p>Cultivate a mindset of abundance and attract limitless opportunities.</p>
-            </div>
-        </div>
-    </section>
+  <div class="section"  style="background-color: #f9f9f9;">
+    <h2><a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net">Learn More About Money Magnetism</a></h2>
+    <p><a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net"><img src="imgs/Capture.jpg" ></a></p>
+    <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" class="cta-button">Learn More</a>
+  </div>
 
-    <footer class="footer">
-        <p>&copy; 2024 Magnetizing Money. All rights reserved. U.S.A</p>
-    </footer>
+  <div class="section">
+    <h2>Testimonials</h2>
+    <p>Find out what our satisfied customers have to say about Money Magnetism.</p>
+    <a href="#" class="cta-button">Read Testimonials</a>
+  </div>
 
-    <script> 
-        const images = document.querySelector('.active');
-
-        function change(change) {
-              images.style.opacity = 0; // Fade out the current image
-              setTimeout(() => {
-                  images.src = "imgs/img"+change+".jpg";
-                  images.alt = "Slide "+change;
-                  images.style.opacity = 1; // Fade in the new image
-              }, 550); // Change the duration (in milliseconds) for the fade effect if needed
-        }
-
-        function showNextImage() {
-             if(images.alt === 'Slide 1') {
-                 change('2');  
-             } else if(images.alt === 'Slide 2') {
-                 change('3');
-             } else if(images.alt === 'Slide 3') {
-                change('4');
-             } else if(images.alt === 'Slide 4') {
-                 change('5');
-             } else if(images.alt === 'Slide 5') {
-                 change('6');
-             } else if(images.alt === 'Slide 6') {
-                 change('1');
-             }
-        }
-
-        setInterval(showNextImage, 5000); // Change image every 3 seconds
-    </script>
 </body>
+
 </html>
