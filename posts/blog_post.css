@@ -1,0 +1,129 @@
+  /* Resetting default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+    background-image: url('../imgs/background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  header {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  header img.logo {
+    width: 110px; /* Increase logo size for better visibility */
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .section {
+    padding: 20px 0; /* Adjust padding for smaller screens */
+    text-align: center;
+  }
+
+  .section h2 {
+    font-size: 2em; /* Increase heading size for desktop */
+    margin-bottom: 20px; /* Increase bottom margin for better separation */
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .section p {
+    font-size: 1.2em; /* Increase font size for better readability */
+    line-height: 1.6; /* Adjust line height for better spacing */
+    margin-bottom: 30px; /* Increase bottom margin for better separation */
+  }
+
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .blog-post img {
+    display: block;
+    margin: 0 auto 20px; /* Center horizontally and add margin bottom */
+    max-width: 100%; /* Ensure image does not exceed container width */
+  }
+
+  .blog-post h2.blog_title {
+    text-align: center; /* Center the title */
+  }
+
+  .button {
+    display: block;
+    width: 80%; /* Set width relative to the container */
+    max-width: 300px; /* Limit maximum width for better spacing */
+    margin: 0 auto 20px; /* Center horizontally and add margin bottom */
+    padding: 15px 20px; /* Adjust padding for better touch interaction */
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+    font-size: 1.2em;
+  }
+
+  i {
+    color: darkgreen;
+    font-size: 1.3em;
+  }
+
+  .button:hover {
+    background-color: #333; /* Darken the background color on hover */
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+
+  li {
+    margin-top: 15px;
+    font-size: 1.2em;
+  }
+
+  .top_nav {
+  text-align: center;
+}
+
+.top_nav > div {
+  display: inline-block;
+  margin: 0 10px; /* Adjust the margin as needed */
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.top_nav > div > a {
+   text-decoration: none;
+   font-weight: bold;
+}

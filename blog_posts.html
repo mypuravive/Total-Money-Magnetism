@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List of Blog Posts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Resetting default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #444;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header img.logo {
+      width: 110px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 0;
+      text-align: center;
+      overflow: hidden; /* Clear floats */
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      overflow: hidden; /* Hide overflowing content */
+      text-overflow: ellipsis; /* Add ellipsis for overflow text */
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .blog-post {
+      width: 100%; /* Adjusted width for mobile view */
+      padding: 20px;
+    }
+
+    .blog-post img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 20px; /* Center image */
+      display: block; /* Ensure proper display */
+    }
+
+    .blog-post h2 {
+      margin-top: 0; /* Add margin-top to separate title from image */
+      overflow: hidden; /* Hide overflowing content */
+      text-overflow: ellipsis; /* Add ellipsis for overflow text */
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .blog-post p {
+      overflow: hidden; /* Hide overflowing content */
+      text-overflow: ellipsis; /* Add ellipsis for overflow text */
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .blog-post .cta-button {
+      display: block; /* Ensure button occupies full width */
+      margin: 20px auto 0; /* Center button */
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Distribute items evenly */
+        flex-wrap: wrap; /* Allow items to wrap to the next row */
+      }
+
+      .blog-post {
+        width: calc(50% - 20px); /* Adjusted width for desktop view with margin */
+        /*max-width: 300px;*/ /* Limit width to prevent exceeding container */
+        margin-bottom: 40px; /* Add margin between items */
+        border: 2px solid #f9f9f9;
+      }
+
+      .top_nav {
+  text-align: center;
+}
+
+.top_nav > div {
+  display: inline-block;
+  margin: 0 10px; /* Adjust the margin as needed */
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.top_nav > div > a {
+   text-decoration: none;
+   font-weight: bold;
+}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">
+      <img src="imgs/logo.png" alt="Logo" class="logo">
+    </a>
+    <br>
+    <nav class='top_nav'>
+      <div class="top_nav"><a href='index.html'>Home</a></div>
+      <div class="top_nav"><a href="https://2bfc67kiw9q1mrfq2jlg1lwu4y.hop.clickbank.net" target="_blank">Products</a></div>
+      <div class='top_nav'><a href='blog_posts.html'>Blog</a></div>
+    </nav>
+  </header>
+
+  <div class="section">
+    <div class="blog-post">
+      <a href='posts/blog1.html'><img src="imgs/blog_imgs/1.jpg" alt="Blog Post 1 Image"></a>
+      <h2><a href="#">Harnessing The Power of Hypnotic Language</a></h2>
+      <p>A Short But Powerful Money Hypnosis</p>
+      <a href="posts/blog1.html" class="cta-button">Read More</a>
+    </div>
+    <div class="blog-post">
+      <a href='posts/blog2.html'><img src="imgs/blog_imgs/2.jpg" alt="Blog Post 2 Image"></a>
+      <h2><a href="#">The Mindfulness Secret to Abundance</a></h2>
+      <p>The practice of mindfulness reveals a profound connection between feelings of comfort and wealth....</p>
+      <a href="posts/blog2.html" class="cta-button">Read More</a>
+    </div>
+        <div class="blog-post">
+      <a href='posts/blog3.html'><img src="imgs/blog_imgs/3.jpg" alt="Blog Post 1 Image"></a>
+      <h2><a href="#">Harnessing The Power of Hypnotic Language</a></h2>
+      <p>A Short But Powerful Money Hypnosis</p>
+      <a href="posts/blog3.html" class="cta-button">Read More</a>
+    </div>
+    <div class="blog-post">
+      <a href='posts/blog4.html'><img src="imgs/blog_imgs/4.jpg" alt="Blog Post 2 Image"></a>
+      <h2><a href="#">The Mindfulness Secret to Abundance</a></h2>
+      <p>The practice of mindfulness reveals a profound connection between feelings of comfort and wealth....</p>
+      <a href="posts/blog4.html" class="cta-button">Read More</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
